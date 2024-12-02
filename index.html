@@ -1,5 +1,4 @@
 <!doctype html>
-<!--z-depth added-->
 <html class="z-depth-2" lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -65,76 +64,95 @@
             <div class="nav-wrapper #3f51b5 indigo darken-1">
                 <div class="container">
                     <a
-                        href="index.html"
+                        href="#!"
                         class="brand-logo yellow-text text-darken-3"
-                        style="font-family: Silkscreen; font-size: 1.30rem;"
+                        style="font-family: Silkscreen; font-size: 1.3rem"
                         >7th Pixel Consulting</a
                     >
                     <a href="#!" data-target="mobile-demo" class="sidenav-trigger"
                         ><i class="material-icons">menu</i></a
                     >
-                    <ul style="font-family: Silkscreen;" class="right hide-on-med-and-down">
-                        <li class="active"><a href="index.html">Home</a></li>
+                    <ul style="font-family: Silkscreen" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="info.html">Info</a></li>
                         <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <ul style="font-family: Silkscreen;" class="sidenav" id="mobile-demo">
-            <li class="active"><a href="index.html">Home</a></li>
+        <ul style="font-family: Silkscreen" class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Home</a></li>
             <li><a href="info.html">Info</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
 
-        <div class="slider">
-            <ul class="slides">
-                <li>
-                    <img src="images/sprintimg1.jpg" />
-                    <!-- random image -->
-                    <div class="caption center-align">
-                        <h3>Professional Opinions</h3>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/sprintimg2.jpg" />
-                    <!-- random image -->
-                    <div class="caption left-align">
-                        <h3>Excellent Reviews</h3>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/sprintimg3.jpeg" />
-                    <!-- random image -->
-                    <div class="caption right-align">
-                        <h3>Top Tier Analysis</h3>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/springimg4.jpeg" />
-                    <!-- random image -->
-                    <div class="caption center-align">
-                        <h3 style="font-family: Silkscreen;">7th Pixel</h3>
-                    </div>
-                </li>
-            </ul>
+        <!-- testing things -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/sprintimg1.jpg" style="width: 100%; height: 500px;" />
+                <div class="text">7th Pixel</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/sprintimg2.jpg" style="width: 100%; height: 500px;" />
+                <div class="text">Top Tier Analysis</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/sprintimg3.jpeg" style="width: 100%; height: 500px;" />
+                <div class="text">Excellent Reviews</div>
+            </div>
         </div>
+        <br/>
+
+        <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 4000); // Change image every 4 seconds
+            }
+        </script>
 
         <!-- Main Content Section -->
         <section id="opening">
             <article>
                 <h2 class="center-align">Welcome to 7th Pixel!</h2>
-                <h3 style="color: #F72585; font-weight: 800;" class="center-align">An expert guide to gaming</h3>
+                <h3 style="color: #f72585; font-weight: 800" class="center-align">An expert guide to gaming</h3>
             </article>
 
             <article class="center-align">
-                <h3 style="font-weight: 800;">We're here to help YOU</h3>
-                <p style="margin-left: 9vw; margin-right: 9vw;">
+                <h3 style="font-weight: 800">We're here to help YOU</h3>
+                <p style="margin-left: 9vw; margin-right: 9vw">
                     At 7th Pixel, we blend our passion for technology with a deep understanding of gaming to bring you
                     the best recommendations from the last few years. Whether you're a casual player or a hardcore
                     enthusiast, our experts stay ahead of the curve to highlight the most innovative, immersive, and
@@ -147,11 +165,11 @@
         <!-- Footer Section -->
         <footer class="page-footer indigo darken-1">
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
+                <div class="column">
+                    <div class="col l6 s6">
                         <h6><a class="white-text" href="#top">Back to top</a></h6>
                     </div>
-                    <div class="col l4 offset-l2 s12">
+                    <div class="col l6 s6">
                         <h5 class="white-text">Connect With Us</h5>
                         <p class="grey-text text-lighten-4">
                             Join our community on social media to keep up with the latest news, updates, and exclusive
@@ -179,7 +197,8 @@
                 <div class="container">
                     © 2024 7th Pixel Consulting, All Rights Reserved
                     <a class="grey-text text-lighten-4 right" href="#!"
-                        ><img src="images/7thPixelLogocopy.png" width="30px"/></a>
+                        ><img src="images/7thPixelLogocopy.png" width="30px"
+                    /></a>
                 </div>
             </div>
         </footer>
