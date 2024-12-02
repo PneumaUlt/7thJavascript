@@ -1,0 +1,58 @@
+header,
+section,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+    display: block;
+}
+
+body {
+    font-family: Lexend, Times, sans-serif;
+    line-height: 1.4em;
+}
+
+#logo {
+    width: 100px;
+}
+
+
+ul li {
+    display: inline;
+    margin-right: 30px;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #4361EE;
+}
+
+/* Main Section Area */
+
+
+.courses article {
+    width: 100;
+    overflow: auto;
+}
+
+figcaption {
+    font-size: 80%;
+    text-align: center
+}
+
+
+h3 {
+    font-family: 'lexend', 'cursive';
+    font-weight: normal;
+}
+
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 735;
+    font-style: normal;
+}
