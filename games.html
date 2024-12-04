@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--z-depth added-->
+<html class="z-depth-2" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>7th Pixel Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+            $('.scrollspy').scrollSpy();
+            $('select').formSelect();
+            $('.parallax').parallax();
+        });
+        //function for finding a game meeting criteria
+        function findGame() {
+            // get inputs from dropdowns and create variables
+            let genre = document.getElementById('genre').value;
+            let platform = document.getElementById('platform').value;
+            let releaseYear = document.getElementById('releaseYear').value;
+            let selectedGame = ""
+            //filter the games
+            if (genre == "Action-Adventure") {
+                if (platform == "Console") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "God of War: Ragnarok";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Batman: Arkham Asylum";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "Metal Gear Solid 2: Sons of Liberty";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "PC") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Baldur's Gate 3";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Dishonored";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "Thief: The Dark Project";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "Mobile") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Hitman: Blood Money - Reprisal";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Magicka: Wizards of the Square Tablet";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "No mobile games from this decade.";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else {
+                    selectedGame = "You must choose all categories to get a game!";
+                }
+            } else if (genre == "RPG") {
+                if (platform == "Console") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Elden Ring";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Mass Effect 3";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "Diablo";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "PC") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "The Witcher 3";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Guild Wars 2";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "World of Warcraft";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "Mobile") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Crashlands";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Bastion";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "No mobile games from this decade.";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else {
+                    selectedGame = "You must choose all categories to get a game!";
+                }
+            } else if (genre == "Strategy") {
+                if (platform == "Console") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Crusader Kings III";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "From Dust";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "Monster Rancher 3";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "PC") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "Stellaris";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Company of Heroes";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "Rome: Total War";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else if (platform == "Mobile") {
+                    if (releaseYear == "2015-2024") {
+                        selectedGame = "You Must Build a Boat";
+                    } else if (releaseYear == "2005-2014") {
+                        selectedGame = "Ant Raid";
+                    } else if (releaseYear == "1995-2004") {
+                        selectedGame = "No mobile games from this decade.";
+                    } else {
+                        selectedGame = "You must choose all categories to get a game!";
+                    }
+                } else {
+                    selectedGame = "You must choose all categories to get a game!";
+                }
+            } else {
+                selectedGame = "You must choose all categories to get a game!";
+            }
+
+            //display the filtered game in the corresponding box
+            document.getElementById("displayGame").value = selectedGame;
+        }
+
+    </script>
+    <style>
+        footer a {
+            text-decoration: underline;
+        }
+
+        .brand-logo {
+            margin-left: 10px;
+        }
+
+        .parallax img {
+            width: 100%;
+            height: 20vh
+        }
+
+        img.activator {
+            height: 200px;
+        }
+
+        body {
+            font-family: Lexend, Times, sans-serif;
+            line-height: 1.4em;
+        }
+
+        h2 {
+            font-family: "Silkscreen", sans-serif;
+            font-weight: 735;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4361EE;
+        }
+
+        ul li {
+            display: inline;
+            margin-right: 30px;
+        }
+        h4 {
+            margin-top: 20px;
+        }
+        button {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper #3f51b5 indigo darken-1">
+            <div class="container">
+                <a href="index.html" class="brand-logo yellow-text text-darken-3" style="font-family: Silkscreen; font-size: 1.30rem;">7th Pixel Consulting</a>
+                <a href="#!" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul style="font-family: Silkscreen;" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="active"><a href="games.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul style="font-family: Silkscreen;" class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li class="active"><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="active"><a href="games.html">Contact Us</a></li>
+    </ul>
+    <!--Header Section-->
+    <div class="parallax-container  valign-wrapper">
+        <div class="parallax"><img src="images/headergraphic.jpg" width="400px"></div>
+        <div class="container">
+            <div class="row box indigo darken-1">
+                <div class="col l12 m12 s12 white-text center-align">
+                    <h2 class="white-text">Best Games By Decade</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content-->
+    <div class="container">
+        <h4 class="center">Find the Best Game For You!</h4>
+        <div class="input-field col s12">
+            <select id="genre">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="Action-Adventure">Action-Adventure</option>
+                <option value="RPG">RPG</option>
+                <option value="Strategy">Strategy</option>
+            </select>
+            <label>Select a Genre</label>
+        </div>
+        <div class="input-field col s12">
+            <select id="platform">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="Console">Console</option>
+                <option value="PC">PC</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+            <label>Select a Platform</label>
+        </div>
+        <div class="input-field col s12">
+            <select id="releaseYear">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="2015-2024">2015-2024</option>
+                <option value="2005-2014">2005-2014</option>
+                <option value="1995-2004">1995-2004</option>
+            </select>
+            <label>Select a Decade</label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12"> <input disabled value="Select all Categories to Receive a Game" id="displayGame" type="text" class="validate"> <label for="displayGame">Your Game:</label> </div>
+        </div> <button class="btn waves-effect waves-light" type="button" onclick="findGame()">Get Game <i class="material-icons right">send</i> </button>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer indigo darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h6><a class="white-text" href="#top">Back to top</a></h6>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Connect With Us</h5>
+                    <p class="grey-text text-lighten-4">
+                        Join our community on social media to keep up with the latest news, updates, and exclusive
+                        content!
+                    </p>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://miamioh.edu/cca/departments/emerging-technology-in-business-and-design/index.html">ETBD</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="https://x.com/MiamiOH_ETBD">Twitter</a></li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.instagram.com/miamioh_etbd/">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 7th Pixel Consulting, All Rights Reserved
+                <a class="grey-text text-lighten-4 right" href="#!"><img src="images/7thPixelLogocopy.png" width="30px" /></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
