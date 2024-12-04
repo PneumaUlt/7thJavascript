@@ -17,10 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-   <!-- Css -->
 
-    <link href="css/faq.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    
+
     <script>
         $(document).ready(function() {
             $('.sidenav').sidenav();
@@ -28,32 +26,37 @@
             //$('.slider').slider({fullWidth: true, indicators: false, height: 500, interval: 6000});
             $('.scrollspy').scrollSpy()
         });
-        
-   
-        
-       //faq section
 
-function toggle() {
-     //toggle + and - symbols
-     if(this.getAttribute("class") == "plus") {
-              this.setAttribute("class", "minus"); } 
-     else {this.setAttribute("class", "plus");}
-    //toggle the open and close state of the answer section in the FAQ 
-     if(this.nextElementSibling.getAttribute("class")=="closed"){
- this.nextElementSibling.setAttribute("class", "open");}
-     else{this.nextElementSibling.setAttribute("class", "closed");}
-}
 
-window.onload = function() {
-    //Find all h5 tags in the HTML and store them in the h5s array variable. 
-     let h5s = document.getElementById("faqs").getElementsByTagName("h5");
-   //Run a loop to check whether an h5 tag (i.e., a FAQ question) is clicked. If it is clicked, call the toggle function. 
-     for(let i=0; i<h5s.length;i++) {
-          h5s[i].onclick = toggle;
-      }
-}
+
+        //faq section
+
+        function toggle() {
+            //toggle + and - symbols
+            if (this.getAttribute("class") == "plus") {
+                this.setAttribute("class", "minus");
+            } else {
+                this.setAttribute("class", "plus");
+            }
+            //toggle the open and close state of the answer section in the FAQ 
+            if (this.nextElementSibling.getAttribute("class") == "closed") {
+                this.nextElementSibling.setAttribute("class", "open");
+            } else {
+                this.nextElementSibling.setAttribute("class", "closed");
+            }
+        }
+
+        window.onload = function() {
+            //Find all h5 tags in the HTML and store them in the h5s array variable. 
+            let h5s = document.getElementById("faqs").getElementsByTagName("h5");
+            //Run a loop to check whether an h5 tag (i.e., a FAQ question) is clicked. If it is clicked, call the toggle function. 
+            for (let i = 0; i < h5s.length; i++) {
+                h5s[i].onclick = toggle;
+            }
+        }
+
     </script>
-    
+
     <style>
         footer a {
             text-decoration: underline;
@@ -92,203 +95,227 @@ window.onload = function() {
             display: inline;
             margin-right: 30px;
         }
-       
+
+        #faqs h4,
+        #gallery h4,
+        #contact h4 {
+            margin-top: -40px;
+        }
+
+        #faqs p {
+            padding-left: 50px;
+        }
+
+        #faqs h5 {
+            padding-left: 50px;
+            line-height: 40px;
+        }
+
+        #faqs h5.plus {
+            background: url(images/plus.png) no-repeat left center;
+            background-size: 30px 30px;
+        }
+
+        #faqs h5.minus {
+            background: url(images/minus.png) no-repeat left center;
+            background-size: 30px 30px;
+        }
+
+        div.closed {
+            display: none;
+        }
+
+        div.open {
+            display: block;
+        }
 
     </style>
 </head>
 
 <body>
-        <!-- Navigation -->
-        <nav>
-            <div class="nav-wrapper #3f51b5 indigo darken-1">
-                <div class="container">
-                    <a
-                        href="index.html"
-                        class="brand-logo yellow-text text-darken-3"
-                        style="font-family: Silkscreen; font-size: 1.30rem;"
-                        >7th Pixel Consulting</a
-                    >
-                    <a href="#!" data-target="mobile-demo" class="sidenav-trigger"
-                        ><i class="material-icons">menu</i></a
-                    >
-                    <ul style="font-family: Silkscreen;" class="right hide-on-med-and-down">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="info.html">Info</a></li>
-                        <li class="active"><a href="faq.html">FAQ</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <ul style="font-family: Silkscreen;" class="sidenav" id="mobile-demo">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="info.html">Info</a></li>
-            <li class="active"><a href="faq.html">FAQ</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <!--Header Section-->
-        <div class="parallax-container  valign-wrapper">
-            <div class="parallax"><img src="images/headergraphic.jpg" width="400px"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper #3f51b5 indigo darken-1">
             <div class="container">
-                <div class="row box indigo darken-1">
-                    <div class="col l12 m12 s12 white-text center-align">
-                        <h2 class="white-text">Frequently Asked Questions</h2>
-                    </div>
-                </div>
-
+                <a href="index.html" class="brand-logo yellow-text text-darken-3" style="font-family: Silkscreen; font-size: 1.30rem;">7th Pixel Consulting</a>
+                <a href="#!" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul style="font-family: Silkscreen;" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li class="active"><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- FAQ section -->
+    <ul style="font-family: Silkscreen;" class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li class="active"><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <!--Header Section-->
+    <div class="parallax-container  valign-wrapper">
+        <div class="parallax"><img src="images/headergraphic.jpg" width="400px"></div>
+        <div class="container">
+            <div class="row box indigo darken-1">
+                <div class="col l12 m12 s12 white-text center-align">
+                    <h2 class="white-text">Frequently Asked Questions</h2>
+                </div>
+            </div>
 
-<section id="faqs" class="section section-contact scrollspy">
+        </div>
+    </div>
+
+    <!-- FAQ section -->
+
+    <section id="faqs" class="section section-contact scrollspy">
         <div class="container">
             <h4 class="center-align">Frequently Asked Questions</h4>
             <h5 class="plus">How did you determine the top 3 video games of each year from 2022-2024?</h5>
             <div class="closed">
                 <p>The top 3 video games of each year are determined by a combination of critical acclaim, player reviews, and popularity. Our team reviews the top choices and meets to decide our final top 3.</p>
             </div>
-<h5 class="plus">Can I suggest a game that I think should be on the list?
+            <h5 class="plus">Can I suggest a game that I think should be on the list?
             </h5>
             <div class="closed">
                 <p>Yes, please visit our <a id="redirect" href="contact.html">Contact Us page</a> and share your suggestions for games you think should be on our yearly list.</p>
             </div>
-<h5 class="plus">Where can I play the games listed on the website?
+            <h5 class="plus">Where can I play the games listed on the website?
             </h5>
             <div class="closed">
                 <p>Under each game's description, you’ll find the platforms where each game is available.</p>
             </div>
-<h5 class="plus">Are these games available worldwide?
+            <h5 class="plus">Are these games available worldwide?
             </h5>
-            <div class="closed">Most games listed on our website are available worldwide. However due to regional restrictions, some games may not be available in certain countries. Check the game's storefront for more details on availability.</p>
+            <div class="closed">
+                <p> Most games listed on our website are available worldwide. However due to regional restrictions, some games may not be available in certain countries. Check the game's storefront for more details on availability. </p>
             </div>
-<h5 class="plus"> Will you update this list in the future?
+            <h5 class="plus"> Will you update this list in the future?
             </h5>
-            <div class="closed">Yes, our plan is to update this page yearly with our top games. Keep an eye out for updates in 2025!</p>
+            <div class="closed">
+                <p> Yes, our plan is to update this page yearly with our top games. Keep an eye out for updates in 2025!</p>
             </div>
 
         </div>
-</section
-    
+    </section>
 
-  
-        <!-- Critic Section -->
+    <!-- Critic Section -->
 
-        <div class="container">
-            <div class="row">
-                <h3 class="section-header center">Critic Websites</h3>
+    <div class="container">
+        <div class="row">
+            <h3 class="section-header center">Critic Websites</h3>
+        </div>
+        <div class="row">
+            <!-- first card -->
+            <!-- New Component, a different type of card. This card is static with a link and description, rather than clickable to open and view more. -->
+            <div class="col l4 m4 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="images/metacriticlogo.png">
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title black-text">Metacritic</span>
+                        <p>Metacritic is a website dedicated to taking reviews from established video game publications, and combining them into one score.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://www.metacritic.com/">Their Website</a>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <!-- first card -->
-<!-- New Component, a different type of card. This card is static with a link and description, rather than clickable to open and view more. -->
-                <div class="col l4 m4 s12">
-                    <div class="card large">
-                        <div class="card-image">
-                            <img src="images/metacriticlogo.png">
 
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title black-text">Metacritic</span>
-                            <p>Metacritic is a website dedicated to taking reviews from established video game publications, and combining them into one score.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://www.metacritic.com/">Their Website</a>
-                        </div>
+            <!--second card -->
+
+            <div class="col l4 m4 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="images/ignlogo.png">
+
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title black-text">IGN</span>
+                        <p>IGN is a well-renowned video game publication that provides in depth reviews on many video games every year.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://www.ign.com/">Their Website</a>
                     </div>
                 </div>
+            </div>
 
-                <!--second card -->
 
-                <div class="col l4 m4 s12">
-                    <div class="card large">
-                        <div class="card-image">
-                            <img src="images/ignlogo.png">
+            <!-- third card -->
 
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title black-text">IGN</span>
-                            <p>IGN is a well-renowned video game publication that provides in depth reviews on many video games every year.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://www.ign.com/">Their Website</a>
-                        </div>
+            <div class="col l4 m4 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="images/opencriticlogo.png">
                     </div>
-                </div>
-
-
-                <!-- third card -->
-
-                <div class="col l4 m4 s12">
-                    <div class="card large">
-                        <div class="card-image">
-                            <img src="images/opencriticlogo.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title black-text">Opencritic</span>
-                            <p>Opencritic is similar to Metacritic, but contains reviews from smaller publications and players that they take into account for their scores.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://opencritic.com/">Their Website</a>
-                        </div>
+                    <div class="card-content">
+                        <span class="card-title black-text">Opencritic</span>
+                        <p>Opencritic is similar to Metacritic, but contains reviews from smaller publications and players that they take into account for their scores.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://opencritic.com/">Their Website</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Installing Section -->
-        <div class="container">
-            <div class="row">
-                <h3 class="section-header center">How to Install PC Games</h3>
-            </div>
-            <div class="row">
-                <div class="col s6 m6">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/FdOq3jder68?si=S1-WoVPvHpHc20ng" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col s6 m6">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/ulyicVW6NkQ?si=VHeQbyYtywqVWVEH" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <footer class="page-footer indigo darken-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h6><a class="white-text" href="#top">Back to top</a></h6>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Connect With Us</h5>
-                        <p class="grey-text text-lighten-4">
-                            Join our community on social media to keep up with the latest news, updates, and exclusive
-                            content!
-                        </p>
-                        <ul>
-                            <li>
-                                <a class="grey-text text-lighten-3" href="https://miamioh.edu/cca/departments/emerging-technology-in-business-and-design/index.html">ETBD</a>
-                            </li>
-                            <li><a class="grey-text text-lighten-3" href="https://x.com/MiamiOH_ETBD">Twitter</a></li>
-                            <li>
-                                <a class="grey-text text-lighten-3" href="https://www.instagram.com/miamioh_etbd/">Instagram</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2024 7th Pixel Consulting, All Rights Reserved
-                    <a class="grey-text text-lighten-4 right" href="#!"><img src="images/7thPixelLogocopy.png" width="30px" /></a>
-                </div>
-            </div>
-        </footer>
     </div>
+
+    <!-- Installing Section -->
+    <div class="container">
+        <div class="row">
+            <h3 class="section-header center">How to Install PC Games</h3>
+        </div>
+        <div class="row">
+            <div class="col s6 m6">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/FdOq3jder68?si=S1-WoVPvHpHc20ng" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col s6 m6">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ulyicVW6NkQ?si=VHeQbyYtywqVWVEH" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer indigo darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h6><a class="white-text" href="#top">Back to top</a></h6>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Connect With Us</h5>
+                    <p class="grey-text text-lighten-4">
+                        Join our community on social media to keep up with the latest news, updates, and exclusive
+                        content!
+                    </p>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://miamioh.edu/cca/departments/emerging-technology-in-business-and-design/index.html">ETBD</a>
+                        </li>
+                        <li><a class="grey-text text-lighten-3" href="https://x.com/MiamiOH_ETBD">Twitter</a></li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.instagram.com/miamioh_etbd/">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 7th Pixel Consulting, All Rights Reserved
+                <a class="grey-text text-lighten-4 right" href="#!"><img src="images/7thPixelLogocopy.png" width="30px" /></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
