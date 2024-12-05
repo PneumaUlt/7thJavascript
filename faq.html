@@ -17,19 +17,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-
     <script>
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-            $('.slider').slider();
-            //$('.slider').slider({fullWidth: true, indicators: false, height: 500, interval: 6000});
-            $('.scrollspy').scrollSpy()
-            $('.parallax').parallax();
-        });
-
-
-
+        $(document).ready(function(){
+    $('.sidenav').sidenav();
+      $('.parallax').parallax();
+     $('.slider').slider( {indicators:false, height: 500, interval:4000}    );
+      $('.collapsible').collapsible();
+    });
+        
         //faq section
 
         function toggle() {
@@ -68,8 +63,8 @@
         }
 
         .parallax img {
-            width: 100%;
-            height: 100%;
+            width: ;
+            height: 
         }
 
         img.activator {
@@ -165,7 +160,6 @@
     <!--Header Section-->
     <div class="parallax-container  valign-wrapper">
         <div class="parallax"><img src="images/faqheader.jpg" width="400px"></div>
-    <br><br>
         <div class="container">
             <div class="row box indigo darken-1">
                 <div class="col l12 m12 s12 white-text center-align">
@@ -177,9 +171,9 @@
     </div>
 
     <!-- FAQ section -->
-
+    <br><br>
+<div class="container">
     <section id="faqs" class="section section-contact scrollspy">
-        <div class="container">
             <h4 class="center-align">Frequently Asked Questions</h4>
             <h5 class="plus">How did you determine the top 3 video games of each year from 2022-2024?</h5>
             <div class="closed">
@@ -206,8 +200,8 @@
                 <p> Yes, our plan is to update this page yearly with our top games. Keep an eye out for updates in 2025!</p>
             </div>
 
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Critic Section -->
 
