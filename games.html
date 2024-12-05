@@ -25,124 +25,31 @@
             $('select').formSelect();
             $('.parallax').parallax();
         });
-        //function for finding a game meeting criteria
+          //function for finding a game meeting criteria
         function findGame() {
             // get inputs from dropdowns and create variables
-            let genre = document.getElementById('genre').value;
-            let platform = document.getElementById('platform').value;
-            let releaseYear = document.getElementById('releaseYear').value;
-            let selectedGame = ""
+            let gamesList = ["God of War: Ragnarok","Batman: Arkham Asylum","Metal Gear Solid 2: Sons of Liberty","Baldur's Gate 3","Dishonored","Thief: The Dark Project","Hitman: Blood Money - Reprisal","Magicka: Wizards of the Square Tablet","No mobile games from this decade","Elden Ring","Mass Effect 3","Diablo","The Witcher 3","Guild Wars 2","World of Warcraft","Crashlands","Bastion","No mobile games from this decade","Crusader Kings III","From Dust","Monster Rancher 3","Stellaris","Company of Heroes","Rome: Total War","You Must Build a Boat","Ant Raid","No mobile games from this decade"];
+            let genre = ["Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","Action-Adventure","RPG","RPG","RPG","RPG","RPG","RPG","RPG","RPG","RPG","Strategy","Strategy","Strategy","Strategy","Strategy","Strategy","Strategy","Strategy","Strategy"];
+            let platform = ["Console","Console","Console","PC","PC","PC","Mobile","Mobile","Mobile","Console","Console","Console","PC","PC","PC","Mobile","Mobile","Mobile","Console","Console","Console","PC","PC","PC","Mobile","Mobile","Mobile"];
+            let releaseYear = ["2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004","2015-2024","2005-2014","1995-2004"];
+            let selectedGenre = document.getElementById('genre').value;
+            let selectedPlatform = document.getElementById('platform').value;
+            let selectedReleaseYear = document.getElementById('releaseYear').value;
+            let selectedGame = "You must choose all categories to get a game!"
+            
             //filter the games
-            if (genre == "Action-Adventure") {
-                if (platform == "Console") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "God of War: Ragnarok";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Batman: Arkham Asylum";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "Metal Gear Solid 2: Sons of Liberty";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "PC") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Baldur's Gate 3";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Dishonored";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "Thief: The Dark Project";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "Mobile") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Hitman: Blood Money - Reprisal";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Magicka: Wizards of the Square Tablet";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "No mobile games from this decade.";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else {
-                    selectedGame = "You must choose all categories to get a game!";
-                }
-            } else if (genre == "RPG") {
-                if (platform == "Console") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Elden Ring";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Mass Effect 3";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "Diablo";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "PC") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "The Witcher 3";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Guild Wars 2";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "World of Warcraft";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "Mobile") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Crashlands";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Bastion";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "No mobile games from this decade.";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else {
-                    selectedGame = "You must choose all categories to get a game!";
-                }
-            } else if (genre == "Strategy") {
-                if (platform == "Console") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Crusader Kings III";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "From Dust";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "Monster Rancher 3";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "PC") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "Stellaris";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Company of Heroes";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "Rome: Total War";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else if (platform == "Mobile") {
-                    if (releaseYear == "2015-2024") {
-                        selectedGame = "You Must Build a Boat";
-                    } else if (releaseYear == "2005-2014") {
-                        selectedGame = "Ant Raid";
-                    } else if (releaseYear == "1995-2004") {
-                        selectedGame = "No mobile games from this decade.";
-                    } else {
-                        selectedGame = "You must choose all categories to get a game!";
-                    }
-                } else {
-                    selectedGame = "You must choose all categories to get a game!";
-                }
-            } else {
-                selectedGame = "You must choose all categories to get a game!";
+            for (let i = 0; i< gamesList.length; i++) {
+                if (selectedGenre == genre[i] && selectedPlatform == platform[i] && selectedReleaseYear == releaseYear [i]) {
+                    selectedGame = gamesList [i];
+                    break;
+                } 
             }
-
+                    
+            
+            
             //display the filtered game in the corresponding box
             document.getElementById("displayGame").value = selectedGame;
         }
-
     </script>
     <style>
         footer a {
